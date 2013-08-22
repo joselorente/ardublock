@@ -585,7 +585,7 @@
 		</BlockGenus>
 
 		<!--****************** Numbers/Constants *************** -->
-		<BlockGenus name="millis" kind="data" color="232 156 149" initlabel="bg.millis">
+		<BlockGenus name="millis" kind="data" color="232 0 0" initlabel="bg.millis">
 			<description>
 				<text>Time in milliseconds</text>
 			</description>
@@ -594,25 +594,25 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="number" kind="data" color="232 156 149" initlabel="bg.number" editable-label="yes">
+		<BlockGenus name="number" kind="data" color="232 0 0" initlabel="bg.number" editable-label="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="digital-high" kind="data" color="232 156 149" initlabel="bg.digital-high">
+		<BlockGenus name="digital-high" kind="data" color="232 0 0" initlabel="bg.digital-high">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="digital-low" kind="data" color="232 156 149" initlabel="bg.digital-low">
+		<BlockGenus name="digital-low" kind="data" color="232 0 0" initlabel="bg.digital-low">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 
-		<BlockGenus name="true" kind="data" initlabel="bg.true" color="232 156 149" editable-label="no">
+		<BlockGenus name="true" kind="data" initlabel="bg.true" color="232 0 0" editable-label="no">
 			<description>
 				<text>
 					Reports the boolean true.
@@ -623,7 +623,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="false" kind="data" initlabel="bg.false" color="232 156 149">
+		<BlockGenus name="false" kind="data" initlabel="bg.false" color="232 0 0">
 			<description>
 				<text>
 					Reports the boolean false.
@@ -634,7 +634,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="232 0 0">
 			<description>
 				<text>
 					Digital Var
@@ -645,7 +645,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="232 0 0">
 			<description>
 				<text>
 					Digital Var
@@ -656,7 +656,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_number" kind="command" color="232 156 149" initlabel="bg.setter_variable_number">
+		<BlockGenus name="setter_variable_number" kind="command" color="232 0 0" initlabel="bg.setter_variable_number">
 			<description>
 				<text>set a number variable</text>
 			</description>
@@ -670,7 +670,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_digital" kind="command" color="232 156 149" initlabel="bg.setter_variable_digital">
+		<BlockGenus name="setter_variable_digital" kind="command" color="232 0 0" initlabel="bg.setter_variable_digital">
 			<description>
 				<text>write digital to pin</text>
 			</description>
@@ -684,7 +684,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="232 0 0">
 			<description>
 				<text>
 					Digital Var
@@ -698,7 +698,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="create_variable_vector" kind="command" color="232 156 149" initlabel="bg.create_variable_vector">
+		<BlockGenus name="create_variable_vector" kind="command" color="232 0 0" initlabel="bg.create_variable_vector">
 			<description>
 				<text>create a vector of numbers</text>
 			</description>
@@ -713,7 +713,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_vector" kind="command" color="232 156 149" initlabel="bg.setter_variable_vector">
+		<BlockGenus name="setter_variable_vector" kind="command" color="232 0 0" initlabel="bg.setter_variable_vector">
 			<description>
 				<text>Set a vector number</text>
 			</description>
@@ -730,7 +730,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_char" kind="command" color="232 156 149" initlabel="bg.setter_variable_char">
+		<BlockGenus name="setter_variable_char" kind="command" color="232 0 0" initlabel="bg.setter_variable_char">
 			<description>
 				<text>create a vector of numbers</text>
 			</description>
@@ -745,7 +745,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="232 0 0">
 			<description>
 				<text>
 					Digital Var
@@ -846,6 +846,102 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="watchdog_setup" kind="command" color="95 120 132"
+			initlabel="bg.watchdog_setup">
+			<description>
+				<text>Watchdog Setup</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.watchdog_enable">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Time">
+					<DefaultArg genus-name="watchdog_60ms" label="WDTO_60MS" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="watchdog_reset" kind="command" color="95 120 132"
+			initlabel="bg.watchdog_reset">
+			<description>
+				<text>Watchdog reset</text>
+			</description>
+		</BlockGenus>
+
+
+		<BlockGenus name="watchdog_15ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_15ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_30ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_30ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_60ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_60ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_120ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_120ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_250ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_250ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_500ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_500ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_1s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_1s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_2s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_2s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_4s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_4s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_8s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_8s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>		
+
 		<!-- ******************** Communication *************** -->
 
 		<BlockGenus name="serial_read" kind="data" color="245 245 245" initlabel="bg.serial_read">
@@ -866,7 +962,8 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="serial_print" kind="command" color="245 245 245" initlabel="bg.serial_print">
+		<!-- **Remove serial print** -->
+		<BlockGenus name="serial_println" kind="command" color="245 245 245" initlabel="bg.serial_print">
 			<description>
 				<text>send message via Serial port</text>
 			</description>
@@ -1154,16 +1251,16 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="serial_println" kind="command" color="245 245 245" initlabel="bg.serial_println">
-			<description>
-				<text>send message via Serial port</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="socket">
-					<DefaultArg genus-name="message" label="message" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
+		<!--<BlockGenus name="serial_println" kind="command" color="245 245 245" initlabel="bg.serial_println">-->
+		<!--	<description>-->
+		<!--		<text>send message via Serial port</text>-->
+		<!--	</description>-->
+		<!--	<BlockConnectors>-->
+		<!--		<BlockConnector connector-type="string" connector-kind="socket">-->
+		<!--			<DefaultArg genus-name="message" label="message" />-->
+		<!--		</BlockConnector>-->
+		<!--	</BlockConnectors>-->
+		<!--</BlockGenus>-->
 
 		<!--************************************************************** TinkerKit! ********************************************************************** -->
 		<BlockGenus name="Tinker_LED" kind="command" color="13 152 164" initlabel="bg.Tinker_LED">
@@ -3029,6 +3126,18 @@
 			<FamilyMember>df_mma7260_z</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>watchdog_15ms</FamilyMember>
+			<FamilyMember>watchdog_30ms</FamilyMember>
+			<FamilyMember>watchdog_60ms</FamilyMember>
+			<FamilyMember>watchdog_120ms</FamilyMember>
+			<FamilyMember>watchdog_250ms</FamilyMember>
+			<FamilyMember>watchdog_500ms</FamilyMember>
+			<FamilyMember>watchdog_1s</FamilyMember>
+			<FamilyMember>watchdog_2s</FamilyMember>
+			<FamilyMember>watchdog_4s</FamilyMember>
+			<FamilyMember>watchdog_8s</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Tinker_I0</FamilyMember>
 			<FamilyMember>Tinker_I1</FamilyMember>
 			<FamilyMember>Tinker_I2</FamilyMember>
@@ -3107,7 +3216,7 @@
 				<BlockGenusMember>constrain</BlockGenusMember>
 			</BlockDrawer>
 
-			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
+			<BlockDrawer button-color="150 0 0" name="bd.number" type="factory">
 				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
@@ -3131,12 +3240,14 @@
 				<BlockGenusMember>no_tone</BlockGenusMember>
 				<BlockGenusMember>servo</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
+				<BlockGenusMember>watchdog_setup</BlockGenusMember>
+				<BlockGenusMember>watchdog_reset</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
 				<BlockGenusMember>serial_read_poly</BlockGenusMember>
 				<BlockGenusMember>serial_available</BlockGenusMember>
-				<BlockGenusMember>serial_print</BlockGenusMember>
+				<!--<BlockGenusMember>serial_print</BlockGenusMember>-->
 				<BlockGenusMember>serial_println</BlockGenusMember>
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
