@@ -490,7 +490,7 @@
 
 		<BlockGenus name="less_equal" kind="function" color="222 131 51" initlabel="bg.less_equal">
 			<description>
-				<text>is upper number greater then lower?</text>
+				<text>Is number less or equal?</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
@@ -501,7 +501,7 @@
 
 		<BlockGenus name="not_equal" kind="function" color="222 131 51" initlabel="bg.not_equal">
 			<description>
-				<text>is upper number greater then lower?</text>
+				<text>Are numbers not equal?</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
@@ -512,7 +512,7 @@
 
 		<BlockGenus name="not_equal_digital" kind="function" color="222 131 51" initlabel="bg.not_equal_digital">
 			<description>
-				<text>is upper number greater then lower?</text>
+				<text>Are binaries not equal?</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
@@ -755,13 +755,13 @@
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-
-		<BlockGenus name="char" kind="data" color="232 156 149" initlabel="bg.char" editable-label="yes">
+		
+		<BlockGenus name="char" kind="data" color="232 0 0" initlabel="bg.char" editable-label="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-
+		
 		<!--****************** Utilities *************** -->
 
 		<BlockGenus name="servo" kind="command" color="95 120 132" initlabel="bg.servo">
@@ -3242,14 +3242,15 @@
 				<BlockGenusMember>false</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
 				<BlockGenusMember>variable_digital</BlockGenusMember>
+				<BlockGenusMember>char</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
-				<BlockGenusMember>variable_vector</BlockGenusMember>
-				<BlockGenusMember>create_variable_vector</BlockGenusMember>
-				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
+				<!--<BlockGenusMember>variable_vector</BlockGenusMember>-->
+				<!--<BlockGenusMember>create_variable_vector</BlockGenusMember>-->
+				<!--<BlockGenusMember>setter_variable_vector</BlockGenusMember>-->
 				<BlockGenusMember>setter_variable_char</BlockGenusMember>
-				<BlockGenusMember>variable_poly</BlockGenusMember>
-				<BlockGenusMember>char</BlockGenusMember>
+				<!--<BlockGenusMember>variable_poly</BlockGenusMember>-->
+
 			</BlockDrawer>
 			<BlockDrawer button-color="95 120 132" name="bd.utilities" type="factory">
 				<BlockGenusMember>tone</BlockGenusMember>
