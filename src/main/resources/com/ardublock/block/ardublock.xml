@@ -25,7 +25,7 @@
 	</BlockConnectorShapes>
 	<BlockGenuses>
 		<!-- ******************** Controls Menu *************** -->
-		<BlockGenus name="loop2" kind="command" color="255 240 0" initlabel="bg.loop2" is-starter="yes" is-terminator="yes" label-unique="yes">
+		<BlockGenus name="loop2" kind="command" color="100 100 0" initlabel="bg.loop2" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -34,7 +34,7 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop2" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="loop" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
+		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -143,7 +143,7 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="subroutine" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
+		<BlockGenus name="subroutine" kind="command" color="150 150 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
 			<description>
 				<text>subroutine</text>
 			</description>
@@ -152,7 +152,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="subroutine-ref" kind="command" color="200 200 0" initlabel="bg.subroutine" editable-label="yes">
+		<BlockGenus name="subroutine-ref" kind="command" color="150 150 0" initlabel="bg.subroutine" editable-label="yes">
 			<description>
 				<text>invoke subroutine</text>
 			</description>
@@ -1196,6 +1196,361 @@
 		<!-- connector-kind="mirror" /> -->
 		<!-- </BlockConnectors> -->
 		<!-- </BlockGenus> -->
+
+		<!--*************Custom************-->
+		<BlockGenus name="lcd_write" kind="command" color="150 150 150"
+			initlabel="bg.lcd_write">
+			<description>
+				<text>send message to LCD via I2C bus</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_address">
+					<DefaultArg genus-name="number" label="39" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_row">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_column">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="lcd_clear" kind="command" color="150 150 150"
+			initlabel="bg.lcd_clear">
+			<description>
+				<text>Clear LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_address">
+					<DefaultArg genus-name="number" label="39" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>		
+
+		<BlockGenus name="lcd_logo" kind="command" color="150 150 150"
+			initlabel="bg.lcd_logo">
+			<description>
+				<text>Logo Greatbatch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_address">
+					<DefaultArg genus-name="number" label="39" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="lcd_backlight" kind="command" color="150 150 150"
+			initlabel="bg.lcd_backlight">
+			<description>
+				<text>write digital to pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_address">
+					<DefaultArg genus-name="number" label="39" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.lcd_light">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="seven_segment_write" kind="command" color="150 150 150"
+			initlabel="bg.seven_segment_write">
+			<description>
+				<text>send number to 7 segment via I2C bus</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.seven_segment_address">
+					<DefaultArg genus-name="number" label="112" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.seven_segment_colon">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>				
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.seven_segment_number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="seven_segment_setup" kind="command" color="150 150 150"
+			initlabel="bg.seven_segment_setup">
+			<description>
+				<text>setup of 7 segment via I2C bus</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.seven_segment_address">
+					<DefaultArg genus-name="number" label="112" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.seven_segment_intensity">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.seven_segment_blink">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="ds18b20_read" kind="data" color="150 150 150"
+			initlabel="bg.ds18b120_read">
+			<description>
+				<text>Thermometer 18B20 Read</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Resolution">
+					<DefaultArg genus-name="ds18b20_res_12" label="RES_12" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Pin Dat">
+					<DefaultArg genus-name="digital_2" label="D_2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="ds18b20_res_9" kind="data" color="255 255 0"
+			initlabel="bg.ds18b20_res_9" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ds18b20_res_10" kind="data" color="255 255 0"
+			initlabel="bg.ds18b20_res_10" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ds18b20_res_11" kind="data" color="255 255 0"
+			initlabel="bg.ds18b20_res_11" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ds18b20_res_12" kind="data" color="255 255 0"
+			initlabel="bg.ds18b20_res_12" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="digital_2" kind="data" color="255 255 0"
+			initlabel="bg.digital_2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_3" kind="data" color="255 255 0"
+			initlabel="bg.digital_3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_4" kind="data" color="255 255 0"
+			initlabel="bg.digital_4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_5" kind="data" color="255 255 0"
+			initlabel="bg.digital_5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_6" kind="data" color="255 255 0"
+			initlabel="bg.digital_6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_7" kind="data" color="255 255 0"
+			initlabel="bg.digital_7" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_8" kind="data" color="255 255 0"
+			initlabel="bg.digital_8" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_9" kind="data" color="255 255 0"
+			initlabel="bg.digital_9" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_10" kind="data" color="255 255 0"
+			initlabel="bg.digital_10" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_11" kind="data" color="255 255 0"
+			initlabel="bg.digital_11" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_12" kind="data" color="255 255 0"
+			initlabel="bg.digital_12" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital_13" kind="data" color="255 255 0"
+			initlabel="bg.digital_13" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="rtc_read" kind="data" color="150 150 150"
+			initlabel="bg.rtc_read">
+			<description>
+				<text>Real Time Clock Read</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Data">
+					<DefaultArg genus-name="rtc_dow" label="Day of week" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="rtc_year" kind="data" color="255 255 0"
+			initlabel="bg.rtc_year" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="rtc_month" kind="data" color="255 255 0"
+			initlabel="bg.rtc_month" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="rtc_day" kind="data" color="255 255 0"
+			initlabel="bg.rtc_day" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="rtc_hour" kind="data" color="255 255 0"
+			initlabel="bg.rtc_hour" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="rtc_minute" kind="data" color="255 255 0"
+			initlabel="bg.rtc_minute" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="rtc_second" kind="data" color="255 255 0"
+			initlabel="bg.rtc_second" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="rtc_dow" kind="data" color="255 255 0"
+			initlabel="bg.rtc_dow" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="thermocouple_read" kind="data" color="150 150 150"
+			initlabel="bg.thermocouple_read">
+			<description>
+				<text>Thermocouple Read</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Source">
+					<DefaultArg genus-name="thermocouple_centigrade" label="Centigrade" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="thermocouple_centigrade" kind="data" color="255 255 0"
+			initlabel="bg.thermocouple_centigrade" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug"  />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="thermocouple_fahrenheit" kind="data" color="255 255 0"
+			initlabel="bg.thermocouple_fahrenheit" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug"  />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="thermocouple_cjc" kind="data" color="255 255 0"
+			initlabel="bg.thermocouple_cjc" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="thermocouple_iserror" kind="data" color="150 150 150"
+			initlabel="bg.thermocouple_iserror">
+			<description>
+				<text>Thermocouple error?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>		     
 
 		<!-- ******************** Especial Menu *************** -->
 
@@ -3170,10 +3525,41 @@
 			<FamilyMember>Tinker_O4</FamilyMember>
 			<FamilyMember>Tinker_O5</FamilyMember>
 		</BlockFamily>
-		<!-- <BlockFamily> -->
-		<!-- <FamilyMember>sd_return</FamilyMember> -->
-		<!-- <FamilyMember>sd_no_return</FamilyMember> -->
-		<!-- </BlockFamily> -->
+		<BlockFamily>
+			<FamilyMember>ds18b20_res_9</FamilyMember>
+			<FamilyMember>ds18b20_res_10</FamilyMember>
+			<FamilyMember>ds18b20_res_11</FamilyMember>
+			<FamilyMember>ds18b20_res_12</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+				<FamilyMember>digital_2</FamilyMember>
+				<FamilyMember>digital_3</FamilyMember>
+				<FamilyMember>digital_4</FamilyMember>
+				<FamilyMember>digital_5</FamilyMember>
+				<FamilyMember>digital_6</FamilyMember>
+				<FamilyMember>digital_7</FamilyMember>
+				<FamilyMember>digital_8</FamilyMember>
+				<FamilyMember>digital_9</FamilyMember>
+				<FamilyMember>digital_10</FamilyMember>
+				<FamilyMember>digital_11</FamilyMember>
+				<FamilyMember>digital_12</FamilyMember>
+				<FamilyMember>digital_13</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+				<FamilyMember>rtc_year</FamilyMember>
+				<FamilyMember>rtc_month</FamilyMember>
+				<FamilyMember>rtc_day</FamilyMember>
+				<FamilyMember>rtc_hour</FamilyMember>
+				<FamilyMember>rtc_minute</FamilyMember>
+				<FamilyMember>rtc_second</FamilyMember>
+				<FamilyMember>rtc_dow</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+				<FamilyMember>thermocouple_centigrade</FamilyMember>
+				<FamilyMember>thermocouple_fahrenheit</FamilyMember>
+				<FamilyMember>thermocouple_cjc</FamilyMember>
+		</BlockFamily>
+
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -3284,6 +3670,21 @@
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
 			</BlockDrawer>
+			
+			<BlockDrawer button-color="70 70 70" name="bd.custom"
+				type="factory">
+				<BlockGenusMember>lcd_write</BlockGenusMember>
+				<BlockGenusMember>lcd_clear</BlockGenusMember>
+				<BlockGenusMember>lcd_logo</BlockGenusMember>
+				<BlockGenusMember>lcd_backlight</BlockGenusMember>
+				<BlockGenusMember>seven_segment_write</BlockGenusMember>
+				<BlockGenusMember>seven_segment_setup</BlockGenusMember>
+				<BlockGenusMember>ds18b20_read</BlockGenusMember>
+				<BlockGenusMember>rtc_read</BlockGenusMember>
+				<BlockGenusMember>thermocouple_read</BlockGenusMember>
+				<BlockGenusMember>thermocouple_iserror</BlockGenusMember>
+			</BlockDrawer>			
+			
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
