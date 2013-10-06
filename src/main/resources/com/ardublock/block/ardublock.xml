@@ -1266,6 +1266,98 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<!--*************Test************-->
+		<BlockGenus name="lcd_write_serial" kind="function" color="150 150 150">
+			<description>
+				<text>LCD serial
+				      LCD Serial RS=12, Enable=11, D4=5, D5=4, D6=3, D7=2
+				      LCD TWI UNO SDA=4, SCL=5 Mega SDA=20 SCL=21 Leonardo SDA=2 SCL=3
+				      LCD SPI Data=3, Clock=2, Latch=4
+                      Library: https://github.com/adafruit/LiquidCrystal
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_address">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_row">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_column">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="lcd_write_twi" kind="function" color="150 150 150">
+			<description>
+				<text>LCD I2C
+				      LCD Serial RS=12, Enable=11, D4=5, D5=4, D6=3, D7=2
+				      LCD TWI UNO SDA=4, SCL=5 Mega SDA=20 SCL=21 Leonardo SDA=2 SCL=3
+				      LCD SPI Data=3, Clock=2, Latch=4
+                      Library: https://github.com/adafruit/LiquidCrystal
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_address">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_row">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_column">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="lcd_write_spi" kind="function" color="150 150 150">
+			<description>
+				<text>LCD SPI
+				      LCD Serial RS=12, Enable=11, D4=5, D5=4, D6=3, D7=2
+				      LCD TWI UNO SDA=4, SCL=5 Mega SDA=20 SCL=21 Leonardo SDA=2 SCL=3
+				      LCD SPI Data=3, Clock=2, Latch=4
+                      Library: https://github.com/adafruit/LiquidCrystal
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_address">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_row">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.lcd_column">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		
+		<!--*************/Test************-->
+		
+		
 		<BlockGenus name="seven_segment_write" kind="command" color="150 150 150"
 			initlabel="bg.seven_segment_write">
 			<description>
@@ -3559,6 +3651,13 @@
 				<FamilyMember>thermocouple_fahrenheit</FamilyMember>
 				<FamilyMember>thermocouple_cjc</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+				<FamilyMember>lcd_write_serial</FamilyMember>
+				<FamilyMember>lcd_write_twi</FamilyMember>
+				<FamilyMember>lcd_write_spi</FamilyMember>
+		</BlockFamily>
+		
+		
 
 	</BlockFamilies>
 
@@ -3677,6 +3776,7 @@
 				<BlockGenusMember>lcd_clear</BlockGenusMember>
 				<BlockGenusMember>lcd_logo</BlockGenusMember>
 				<BlockGenusMember>lcd_backlight</BlockGenusMember>
+				<BlockGenusMember>lcd_write_serial</BlockGenusMember>
 				<BlockGenusMember>seven_segment_write</BlockGenusMember>
 				<BlockGenusMember>seven_segment_setup</BlockGenusMember>
 				<BlockGenusMember>ds18b20_read</BlockGenusMember>
